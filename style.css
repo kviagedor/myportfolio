@@ -250,20 +250,17 @@ footer i:hover,
         width: 100%;
         align-items: center;
     }
-    .about-col-2{
-        margin-left:;
-    }
     .box {
-        padding-top: 120px; /* Adjust based on the header height */
+        padding-top: 120px; 
     }
     .tab-links {
-        font-size: 16px; /* Adjust as needed */
+        font-size: 16px; 
     }
     .services-list div {
-        padding: 30px; /* Adjust as needed */
+        padding: 30px; 
     }
     .work-list .work{
-        padding: 20px; /* Adjust as needed */
+        padding: 20px; 
     }
     .contact-box{
         align-items: center;
