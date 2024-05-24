@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="header">
+        <nav class="container">
+            <a href="#" class="logo">
+                <span class="orange-color">Ken</span>Via.
+            </a>
+            <ul class="menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact us</a></li>
+                <button class="close-btn">
+                    <i class="ri-close-line"></i>
+                </button>
+            </ul>
+            <div class="grp-btns">
+                <div class="icons">
+                    <a href="" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.facebook.com/keneth.viagedor" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-gmail' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+                </div>
+                <div class="menu-wrapper">
+                    <button class="menu-btn">
+                        <i class="ri-menu-2-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <div class="box grid">
+                    <div class="box-img">
+                        <img src="images/user.jpg" alt="">
+                    </div>
+                    <div class="box-content">
+                        <h1>Hi, I'm <span class="orange-color">Ken</span><br> from the Philippines</h1>
+                        <p>Web Developer</p>
+                        <p>Crafting Digital Experiences, One Line of Code at a Time.</p>
+                        <button class="custom-btn get-btn">
+                            <span>Let's talk</span>
+                            <i class="ri-arrow-right-line get-arrow"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user2.png" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About me</h1>
+                        <p>Results-driven IT professional with extensive experience in system administration, seeking to transition into a web developer role. Eager to leverage technical expertise, problem-solving skills, and passion for coding to contribute to the development of innovative web applications. 
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                                <li>Proficient in HTML, CSS, JavaScript and Python.</li>
+                                <li>Experience with web development frameworks such as Flask, Django and Bootstrap.</li>
+                                <li>Strong understanding of networking principles and cybersecurity best practices.</li>
+                                <li>Excellent troubleshooting and problem-solving abilities.</li>
+                                <li>Familiarity with version control systems like Git.</li>
+                                <li>Ability to work collaboratively in a team environment.</li>
+                                <li>Effective communication and interpersonal skills.</li>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>May 2016 - Present</span><br>System Administrator at ADM Animal Nutrition</li>
+                                <li><span>June 2015 – May 2016</span><br>IT STAFF at Popular Feedmill Corporation</li>
+                                <li><span>February 2012 – September 2012</span><br>Computer Aided Measuring Technician at Microsourcing Inc.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2005-2009</span><br>(BSIT) Bachelor of Science in Information Technology at University of Cebu Lapu-Lapu and Mandaue  </li>
+                                <li><span>1998-2002</span><br>(Secondary) Holy Child High School</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------Services-------- -->
+        <section id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="ri-code-s-slash-line"></i>
+                        <h2>Web Design</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, rerum.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="ri-crop-line"></i>
+                        <h2>UI/UX Design</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, rerum.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="ri-app-store-line"></i>
+                        <h2>App Design</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, rerum.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="ri-code-s-slash-line"></i>
+                        <h2>Web Design</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, rerum.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ----------portfolio---------- -->
+        <section id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/work1.png" alt="">
+                        <div class="layer">
+                            <h3>Asset Inventory System</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, dolorum.</p>
+                            <a href="https://kenjes12.pythonanywhere.com/" target="_blank"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work2.png" alt="">
+                        <div class="layer">
+                            <h3>E-Commerce App</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, dolorum.</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work3.png" alt="">
+                        <div class="layer">
+                            <h3>Online Shopping App</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, dolorum.</p>
+                            <a href=""><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h1 class="sub-title">Contact Me</h1>
+                <div class="row">
+                    <div class="contact-left">
+                        <div class="contact-box">
+                            <p><i class='bx bx-paper-plane'></i> keneth.viagedor@gmail.com</p><br>
+                            <p><i class='bx bxs-phone' ></i> +63 917 859 3661</p>
+                            <div class="icons">
+                                <a href="" target="_blank"><i class='bx bxl-twitter'></i></a>
+                                <a href="https://www.facebook.com/keneth.viagedor" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+                                <a href="" target="_blank"><i class='bx bxl-gmail' ></i></a>
+                                <a href="" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+                            </div>
+                            <a href="images/mycv.pdf" download>Click here</a><p>to download my CV</p>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <div class="contact-box">
+                            <div class="box-field">
+                                <i class="ri-user-line"></i>
+                                <input type="text" placeholder="Your Fullname">
+                            </div>
+                            <div class="box-field">
+                                <i class="ri-mail-line"></i>
+                                <input type="text" placeholder="Email">
+                            </div>
+                            <textarea placeholder="Your Message" class="text-area"></textarea>
+                            <button class="custom-btn submit-btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container grid">
+                <div class="footer-element">
+                    <h3><a href="" class="logo footer-logo">
+                        <span class="orange-color">Ken</span>Via.</a>
+                    </h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Aut ex enim ratione cupiditate nemo. Iusto sed necessitatibus 
+                        quisquam ex. Excepturi, cupiditate iusto! Iusto nulla sapiente 
+                        explicabo, vero minus libero ea.</p>
+                </div>
+                <div class="footer-element">
+                    <ul>
+                        <li><h3>Services</h3></li>
+                        <li><a href="#" class="footer-link">Web Design</a></li>  
+                        <li><a href="#" class="footer-link">UI/UX Design</a></li> 
+                        <li><a href="#" class="footer-link">App Design</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-element">
+                    <ul>
+                        <li><h3>Links</h3></li>
+                        <li><a href="#home" class="footer-link">Home</a></li>  
+                        <li><a href="#about" class="footer-link">About</a></li>  
+                        <li><a href="#service" class="footer-link">Services</a></li> 
+                        <li><a href="#portfolio" class="footer-link">Portfolio</a></li> 
+                        <li><a href="#contact" class="footer-link">Contact</a></li>    
+                    </ul>
+                </div>
+                <div class="footer-element">
+                    <h3>Get in Touch</h3>
+                    <div class="email-input-box">
+                        <input type="text" placeholder="E-mail">
+                        <button class="email-btn">Go</button>
+                    </div>
+                    <div class="icons">
+                        <a href="" target="_blank"><i class='bx bxl-twitter'></i></a>
+                        <a href="https://www.facebook.com/keneth.viagedor" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-gmail' ></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+</body>
+</html>
