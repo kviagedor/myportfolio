@@ -2,11 +2,6 @@
 
 :root{
 
-    --primary-color: #708090;
-    --accent-color: #B76E79;
-    --highlight-color: #F9EBB2;
-    --background-color: #FDFDFD;
-
     --black-color: #14171A;
     --orange-color: #ff6633;
     --grey--color: #f7f7f7;
@@ -73,22 +68,6 @@ section:nth-child(even){
     display: grid;
     gap: .5rem;
 }
-.custom-btn{
-    background-color: var(--orange-color);
-    border: none;
-    outline: none;
-    color: white;
-    width: 90px;
-    height: 35px;
-    border-radius: 5px;
-    font-size: var(--normal-font-size);
-    box-shadow: 0 10px 20px -10px var(--orange-color);
-    cursor: pointer;
-}
-.custom-btn:hover{
-    box-shadow: 0 10px 25px -10px var(--orange-color);
-    color: whitesmoke;
-}
 .grp-btns{
     display: flex;
     align-items: center;
@@ -135,6 +114,7 @@ nav{
     color: var(--orange-color);
     margin-right: 15px;
 }
+
 .icons > i{
     padding: 10px;
     cursor: pointer;
@@ -235,9 +215,30 @@ nav ul li a:hover::after,
 }
 .box-img img{
     border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: 0 10px 20px -10px var(--black-color);
+}
+.box-img img:hover{
+transform: translateY(-5px);
 }
 .box-content > h1{
     font-size: var(--biggest-font);
+}
+.custom-btn{
+    background-color: var(--orange-color);
+    border: none;
+    outline: none;
+    color: white;
+    width: 90px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: var(--normal-font-size);
+    box-shadow: 0 10px 20px -10px var(--orange-color);
+    cursor: pointer;
+}
+.custom-btn:hover{
+    box-shadow: 0 10px 25px -10px var(--orange-color);
+    color: whitesmoke;
 }
 .let-btn{
     margin-top: 20px;
@@ -596,7 +597,7 @@ nav ul li a:hover::after,
 }
 
 footer{
-    background-color: black;
+    background-color: var(--black-color);
     color: white;
     padding: 50px 0;
 }
@@ -637,13 +638,27 @@ footer li a:hover{
     font-family: var(--body-font);
 }
 .email-btn{
-    width: 60px;
+    width: 20%;
     border: none;
     outline: none;
-    background-color: orange;
+    background-color: var(--orange-color);
     font-weight: var(--font-medium);
     font-size: var(--normal-font-size);
+    border-radius: 5px;
     cursor: pointer;
+}
+footer .icons{
+    margin-left: 15px;
+}
+.copyright {
+    background: var(--black-color);
+    color: white;
+    justify-content: center;
+    align-items: center; 
+    font-size: 12px;
+    display: flex; 
+    height: 45px; 
+    border-top: 1px solid var(--orange-color);
 }
 
 

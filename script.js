@@ -40,20 +40,6 @@ window.addEventListener("scroll", ()=>{
     headerE1.classList.toggle("header-active", scrollY > 0)
 })
 
-// Add click event listener to each navigation item
-// navLinkE1.forEach(link => {
-//     link.addEventListener('click', function() {
-//         // Remove 'active' class from all navigation items
-//         navLinkE1.forEach(item => item.classList.remove('active'));
-//         // Add 'active' class to the clicked navigation item
-//         this.classList.add('active');
-//     });
-
-//     link.addEventListener('mouseover',  function() {
-//         navLinkE1.forEach(item => item.classList.remove('active'));
-//     })
-// });
-
 
 // -----about tab----
 var tablinks = document.getElementsByClassName('tab-links');
@@ -75,5 +61,7 @@ function opentab(tabname){
 //animation
 const scroll_animation = ScrollReveal({reset: false, distance: "80px", duration: 2500, delay: 500});
 
-scroll_animation.reveal(".box-img, .about-col-2, .services-list, .contact-right", {origin: "right"})
-scroll_animation.reveal(".box-content, .about-col-1, .work-list, .footer-element, .contact-left", {origin: "left"})
+scroll_animation.reveal(".box-img, .about-right, .services-list, .contact-right", {origin: "right"})
+scroll_animation.reveal(".box-content, .about-left, .work-list, .footer-element, .contact-left", {origin: "left"})
+
+
