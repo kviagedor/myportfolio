@@ -2,11 +2,17 @@
 
 :root{
 
+    --primary-color: #708090;
+    --accent-color: #B76E79;
+    --highlight-color: #F9EBB2;
+    --background-color: #FDFDFD;
+
     --black-color: #14171A;
     --orange-color: #ff6633;
     --grey--color: #f7f7f7;
 
     --body-font: 'Poppins', sans-serif;
+    --subtitle-font: 'Poppins', sans-serif;
     --biggest-font: 2rem;
     --bigger-font: 1.25rem;
     --h1-font-size: 1.5rem;
@@ -55,6 +61,9 @@ html{
 section{
     padding: 0 20px;
 }
+section:nth-child(even){
+    background: var(--grey--color);
+}
 .container{
     height: 100%;
     max-width: 1200px;
@@ -96,7 +105,7 @@ header{
     transition: all .2s ease-in-out;
 }
 .header-active{
-    height: 80px;
+    height: 70px;
     background-color: white;
     box-shadow: 0 0 10px  rgba(0, 0, 0, .2);
 }
@@ -166,12 +175,35 @@ footer i:hover,
     color: var(--black-color);
     font-size: var(--normal-font-size);
 }
-.nav-link.active{
-    color: var(--orange-color);
-}
+
 .nav-link:hover{
     color: var(--orange-color);
 }
+.nav-link.active{
+    color: var(--orange-color); 
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--orange-color);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after,
+.nav-link.active::after{
+    width: 80%;
+    margin-left: 10px;
+}
+
 .close-btn{
     position: absolute;
     top: 8%;
@@ -198,29 +230,30 @@ footer i:hover,
     padding-top: 100px;
     grid-template-columns: 1fr;
 }
-.box-img{
-    justify-content: center;
-    align-items: center;
+.box-content{
+    margin: 20px;
+}
+.box-img img{
     border-radius: 10px;
 }
 .box-content > h1{
     font-size: var(--biggest-font);
 }
-.get-btn{
+.let-btn{
     margin-top: 20px;
     width: 150px;
     height: 40px;
 }
-.get-btn:hover > span{
+.let-btn:hover > span{
     margin-right: 10px;
     transition: all .3s ease-in-out;
 }
-.get-arrow{
+.let-arrow{
     position: absolute;
     opacity: 0;
     transition: all .2s ease-in-out;
 }
-.get-btn:hover > .get-arrow{
+.let-btn:hover > .let-arrow{
     opacity: 1;
 }
 
@@ -243,10 +276,13 @@ footer i:hover,
     .container{
         height: 100%;
     }
-    .about-col-1{
+    .row{
+        width: 100%;
+    }
+    .about-left{
         text-align: center;
     }
-    .about-col-1 > img{
+    .about-left > img{
         width: 100%;
         align-items: center;
     }
@@ -277,37 +313,9 @@ footer i:hover,
     .box-img{
         order: 1;
     }
-    .team-container{
+    .row{
         padding: 40px 0;
         grid-template-columns: 1fr 1fr; 
-    }
-    .team-box-img > img{
-        width: 100%;
-    }
-    .student-banner-content{
-        width: 100%;
-        max-width: 400px;
-    }
-    .student-banner-content > h3{
-        font-size: var(--h2-font-size);
-    }
-    .student-banner-content > p{
-        font-size: var(--normal-font-size);
-    }
-    .join-btn{
-        width: 120px;
-        height: 40px;
-        font-size: var(--normal-font-size);
-        margin-top: 10px;
-    }
-    .expert-container{
-        grid-template-columns: 1fr 1fr;
-    }
-    .expert-img{
-        order: 1;
-    }
-    .expert-img > img{
-        width: 100%;
     }
     .footer-element{
         display: flex;
@@ -326,26 +334,26 @@ footer i:hover,
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.about-col-1{
+.about-left{
     flex-basis: 35%;
 }
-.about-col-1 img{
+.about-left img{
     width: 100%;
-
+    border-radius: 10px;
     transition: 0.5s;
     box-shadow: 0 10px 20px -10px var(--black-color);
 }
-.about-col-1 img:hover{
+.about-left img:hover{
     transform: translateY(-5px);
 }
-.about-col-2{
+.about-right{
     flex-basis: 60%;
 }
 .sub-title{
     padding-bottom: 10px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--subtitle-font);
     font-size: 60px;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--black-color);
 }
 .tab-titles{

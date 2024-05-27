@@ -41,18 +41,18 @@ window.addEventListener("scroll", ()=>{
 })
 
 // Add click event listener to each navigation item
-navLinkE1.forEach(link => {
-    link.addEventListener('click', function() {
-        // Remove 'active' class from all navigation items
-        navLinkE1.forEach(item => item.classList.remove('active'));
-        // Add 'active' class to the clicked navigation item
-        this.classList.add('active');
-    });
+// navLinkE1.forEach(link => {
+//     link.addEventListener('click', function() {
+//         // Remove 'active' class from all navigation items
+//         navLinkE1.forEach(item => item.classList.remove('active'));
+//         // Add 'active' class to the clicked navigation item
+//         this.classList.add('active');
+//     });
 
-    link.addEventListener('mouseover',  function() {
-        navLinkE1.forEach(item => item.classList.remove('active'));
-    })
-});
+//     link.addEventListener('mouseover',  function() {
+//         navLinkE1.forEach(item => item.classList.remove('active'));
+//     })
+// });
 
 
 // -----about tab----
