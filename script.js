@@ -21,7 +21,7 @@ let menuBtn = document.querySelector(".menu-btn");
 let closeBtn = document.querySelector(".close-btn");
 let menuE1 = document.querySelector(".menu");
 let headerE1 = document.querySelector("header");
-const navLinkE1 = document.querySelectorAll('.nav-link');
+let navLinkE1 = document.querySelectorAll('.nav-link');
 
 
 menuBtn.addEventListener('click', ()=>{
@@ -34,6 +34,12 @@ menuBtn.addEventListener('click', function() {
 
 closeBtn.addEventListener('click', ()=>{
     menuE1.classList.remove("menu-active");
+})
+
+navLinkE1.forEach(eachBtn => {
+    eachBtn.addEventListener('click', ()=>{
+        menuE1.classList.remove('menu-active')
+    })
 })
 
 window.addEventListener("scroll", ()=>{
@@ -64,4 +70,27 @@ const scroll_animation = ScrollReveal({reset: false, distance: "80px", duration:
 scroll_animation.reveal(".box-img, .about-right, .services-list, .contact-right", {origin: "right"})
 scroll_animation.reveal(".box-content, .about-left, .work-list, .footer-element, .contact-left", {origin: "left"})
 
+// -------contact form--------
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxcflJhtTXZWC_QXLBiGivG948gIZPEgDQdH1uuX-taKqTtBZyaKuHd46SRidcg8IW7dA/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
+const loader = document.getElementById("loader");
 
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    loader.style.display = "block"; // Show the loader
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response =>{
+        loader.style.display = "none"; 
+        // msg.innerHTML = "Message sent successfully.."
+        alert("Message sent successfully..");
+        setTimeout(function(){
+            msg.innerHTML = "";
+        }, 5000);
+        form.reset();
+    })
+    .catch(error => {
+        loader.style.display = "none"; // Hide the loader
+        console.error('Error!', error.message);
+    });
+});

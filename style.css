@@ -258,7 +258,6 @@ transform: translateY(-5px);
     opacity: 1;
 }
 
-
 /**tablet screen**/
 @media screen and (min-width: 769px){
     header{
@@ -588,12 +587,29 @@ transform: translateY(-5px);
 }
 .submit-btn{
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
     height: 40px;
 }
-.contact-heading{
-    margin-bottom: 20px;
 
+.loader {
+    border: 8px solid var(--grey--color); 
+    border-top: 8px solid #3498db; 
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    margin-top: -35px;
+    margin-right: 10px;
+    display: none;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#msg{
+    margin-top: 25px;
 }
 
 footer{

@@ -184,18 +184,20 @@
                         </div>
                     </div>
                     <div class="contact-right">
-                        <div class="contact-box">
+                        <form name="submit-to-google-sheet" class="contact-box">
                             <div class="box-field">
                                 <i class="ri-user-line"></i>
-                                <input type="text" placeholder="Your Fullname">
+                                <input type="text" name="Name" placeholder="Your Fullname" required>
                             </div>
                             <div class="box-field">
                                 <i class="ri-mail-line"></i>
-                                <input type="text" placeholder="Email">
+                                <input type="email" name="Email" placeholder="Your Email" required>
                             </div>
-                            <textarea placeholder="Your Message" class="text-area"></textarea>
-                            <button class="custom-btn submit-btn">Submit</button>
-                        </div>
+                            <textarea name="Message" class="text-area" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="custom-btn submit-btn">Submit</button>
+                            <div id="loader" class="loader"></div>
+                            <span id="msg"></span>
+                        </form>
                     </div>
                 </div>
             </div>
