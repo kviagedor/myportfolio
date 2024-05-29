@@ -67,7 +67,7 @@ function opentab(tabname){
 //animation
 const scroll_animation = ScrollReveal({reset: false, distance: "80px", duration: 2500, delay: 500});
 
-scroll_animation.reveal(".box-img, .about-right, .services-list, .contact-right", {origin: "right"})
+scroll_animation.reveal(".box-img, .about-right, .services-list, .contact-right, .social-icon", {origin: "right"})
 scroll_animation.reveal(".box-content, .about-left, .work-list, .footer-element, .contact-left", {origin: "left"})
 
 // -------contact form--------
@@ -78,11 +78,10 @@ const loader = document.getElementById("loader");
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-    loader.style.display = "block"; // Show the loader
+    loader.style.display = "block"; 
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response =>{
         loader.style.display = "none"; 
-        // msg.innerHTML = "Message sent successfully.."
         alert("Message sent successfully..");
         setTimeout(function(){
             msg.innerHTML = "";
@@ -90,7 +89,7 @@ form.addEventListener('submit', e => {
         form.reset();
     })
     .catch(error => {
-        loader.style.display = "none"; // Hide the loader
+        loader.style.display = "none";
         console.error('Error!', error.message);
     });
 });
