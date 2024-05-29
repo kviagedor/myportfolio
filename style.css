@@ -3,8 +3,9 @@
 :root{
 
     --black-color: #14171A;
+    --white-color: #fff;
     --orange-color: #ff6633;
-    --grey--color: #f7f7f7;
+    --grey-color: #f7f7f7;
 
     --body-font: 'Poppins', sans-serif;
     --subtitle-font: 'Poppins', sans-serif;
@@ -20,6 +21,17 @@
     --font-medium: 500;
     --font-semi-bold: 600;
     --font-bold: 800;
+
+    /* Light Mode */
+    --bg-color-light: #fff;
+    --text-color-light: #333;
+    --link-color-light: #ff6633;
+
+    /* Dark Mode */
+    --bg-color-dark: #222;
+    --text-color-dark: #f7f7f7;
+    --link-color-dark: #ff6633;
+
 }
 @media screen and (min-width: 1000px) {
     :root {
@@ -38,6 +50,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+#icon{
+    width: 25px;
+    cursor: pointer;
+}
+
 a{
     text-decoration: none;
 }
@@ -49,16 +67,54 @@ li{
 }
 body{
     font-family: var(--body-font);
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
 }
+
+body.dark-mode{
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    a{
+        color: var(--grey-color);
+    }
+    .header-active{
+        height: 70px;
+        background-color: var(--bg-color-dark);
+        box-shadow: 0 0 10px  rgba(255, 255, 255, .2);
+    }
+    .sub-title{
+        color: var(--text-color-dark);
+    }
+    #about p, li{
+        color: var(--text-color-dark);
+    }
+    #portfolio{
+        a{
+            color: var(--link-color-dark);
+        }
+    }
+    #contact{
+        .box-field,
+        .box-text-field{
+            border: 1px solid var(--text-color-dark);
+        }
+        input,
+        .text-area{
+            background-color: #222;
+            color: var(--grey--color);
+        }
+    }
+}
+
 html{
     scroll-behavior: smooth;
 }
 section{
     padding: 0 20px;
 }
-section:nth-child(even){
+/* section:nth-child(even){
     background: var(--grey--color);
-}
+} */
 .container{
     height: 100%;
     max-width: 1200px;
@@ -71,6 +127,7 @@ section:nth-child(even){
 .grp-btns{
     display: flex;
     align-items: center;
+    justify-content: end;
 }
 
 header{
@@ -85,7 +142,7 @@ header{
 }
 .header-active{
     height: 70px;
-    background-color: white;
+    background-color: var(--white-color);
     box-shadow: 0 0 10px  rgba(0, 0, 0, .2);
 }
 header a{
@@ -112,9 +169,11 @@ nav{
     font-size: var(--h2-font-size);
     padding: 20px 0;
     color: var(--orange-color);
-    margin-right: 15px;
 }
-
+.icons img{
+    margin-top: 10px;
+    margin-right: -20px;
+}
 .icons > i{
     padding: 10px;
     cursor: pointer;
@@ -206,6 +265,20 @@ nav ul li a:hover::after,
     color: var(--orange-color);
 }
 
+.social-icon{
+    position: fixed;
+    top: 35%;
+    right: 0;
+    font-size: var(--h1-font-size);
+}
+.social-icon li{
+    transition: transform 0.5s;
+}
+.social-icon li:hover{
+    transform: translateY(-5px);
+}
+
+/* ---home page---- */
 .box{
     padding-top: 100px;
     grid-template-columns: 1fr;
@@ -228,7 +301,7 @@ transform: translateY(-5px);
     background-color: var(--orange-color);
     border: none;
     outline: none;
-    color: white;
+    color: var(--white-color);
     width: 90px;
     height: 35px;
     border-radius: 5px;
@@ -238,7 +311,7 @@ transform: translateY(-5px);
 }
 .custom-btn:hover{
     box-shadow: 0 10px 25px -10px var(--orange-color);
-    color: whitesmoke;
+    color: var(--grey--color);
 }
 .let-btn{
     margin-top: 20px;
@@ -413,7 +486,7 @@ transform: translateY(-5px);
 }
 .services-list div{
     background: #262626;
-    color: whitesmoke;
+    color: var(--grey-color);
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -433,7 +506,7 @@ transform: translateY(-5px);
 }
 .services-list a{
     text-decoration: none;
-    color: #fff;
+    color: var(--white-color);
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
@@ -470,10 +543,10 @@ transform: translateY(-5px);
     transition: transform 0.5s;
 }
 .layer{
-    color: whitesmoke;
+    color: var(--grey-color);
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(255, 107, 53, .1), #ff6633);
+    background: linear-gradient(rgba(255, 107, 53, .5), #ff6633);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -498,7 +571,7 @@ transform: translateY(-5px);
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background: #fff;
+    background: var(--white-color);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -540,9 +613,9 @@ transform: translateY(-5px);
 .contact-left a{
     color: var(--orange-color);
 }
-.btn.btn2{
-    display: inline-block;
-    background: var(--orange-color);
+.download-btn{
+    width: 35%;
+    height: 40px;
 }
 
 .contact-right{
@@ -574,16 +647,30 @@ transform: translateY(-5px);
     padding-left: 10px;
     font-family: var(--bigger-font);
 }
-.text-area{
-    resize: none;
+.box-text-field{
     width: 100%;
     height: 200px;
-    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 2px solid var(--black-color);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding: 2px;
+}
+.box-text-field > .text-area{
+    resize: none;
+    width: 100%;
+    height: 100%;
+    border: none;
     outline: none;
     font-size: var(--normal-font-size);
     padding-left: 10px;
-    border-radius: 5px;
     font-family: var(--bigger-font);
+}
+.box-text-field i{
+    margin-top: 5px;
+    align-self: self-start;
 }
 .submit-btn{
     width: 100%;
@@ -614,7 +701,7 @@ transform: translateY(-5px);
 
 footer{
     background-color: var(--black-color);
-    color: white;
+    color: var(--white-color);
     padding: 50px 0;
 }
 .footer-container{
@@ -622,7 +709,7 @@ footer{
     gap: 2rem;
 }
 .footer-logo{
-    color: white;
+    color: var(--white-color);
     padding-bottom: 10px;
     display: block;
 }
@@ -642,7 +729,7 @@ footer li a:hover{
 .email-input-box{
     width: 100%;
     height: 45px;
-    background-color: white;
+    background-color: var(--white-color);
     display: flex;
     border-radius: 5px;
 }
@@ -665,17 +752,15 @@ footer li a:hover{
 }
 footer .icons{
     margin-left: 15px;
+    color: var(--grey-color);
 }
 .copyright {
     background: var(--black-color);
-    color: white;
+    color: var(--white-color);
     justify-content: center;
     align-items: center; 
     font-size: 12px;
     display: flex; 
     height: 45px; 
-    border-top: 1px solid var(--orange-color);
+    box-shadow: 0 0 10px  rgba(255, 255, 255, .2);
 }
-
-
-
