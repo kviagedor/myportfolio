@@ -112,9 +112,6 @@ html{
 section{
     padding: 0 20px;
 }
-/* section:nth-child(even){
-    background: var(--grey--color);
-} */
 .container{
     height: 100%;
     max-width: 1200px;
@@ -311,7 +308,7 @@ transform: translateY(-5px);
 }
 .custom-btn:hover{
     box-shadow: 0 10px 25px -10px var(--orange-color);
-    color: var(--grey--color);
+    color: var(--grey-color);
 }
 .let-btn{
     margin-top: 20px;
@@ -679,8 +676,8 @@ transform: translateY(-5px);
 }
 
 .loader {
-    border: 8px solid var(--grey--color); 
-    border-top: 8px solid #3498db; 
+    border: 8px dotted var(--grey-color); 
+    border-top: 8px dotted #3498db; 
     border-radius: 50%;
     width: 30px;
     height: 30px;
